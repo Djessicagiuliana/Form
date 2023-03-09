@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="pt-br">
+  <head> 
+    <meta charset="utf-8">
+    <title>Divulgação</title>
+    <link rel="shortcut icon" href="icon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  </head>
+<body>
+    <style>
+@media (max-width: 786px)
+  {
+    body, html 
+      {
+        overflow-x: hidden!important;
+      }
+  }
+    
+.container 
+  {
+    display: flex;
+    justify-content: center;
+  } 
+.item
+  {
+    width: 700px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+.form
+  {
+    margin: 1rem;
+  } 
+.titulo 
+  {
+    margin: 2rem;
+    justify-content: center;
+    text-align: center;
+  }   
+.subtitulo , h5
+  {
+    margin: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    text-align: center;
+  }  
+.mb-3, .form-control
+  {
+    margin-bottom: 0.5rem;
+  }
+.row, col
+  {
+    text-align: center;
+    margin-top: 2rem;
+    justify-content:center;
+  }
+.row.box
+  {
+    text-align: center;
+    margin-top: 5px;
+    justify-content:center;
+  }
+.caixa
+  {
+    padding:1rem;
+  } 
+.smalltext
+  {
+    margin: 1rem;
+    color:blue;
+    text-align: center;
+  }
+.button 
+  {
+    background-color: white;
+    color: #00aeff;
+    border: 2px solid #00aeff; 
+    border-radius: 8px;
+    font-size: 25px;
+  }
+.button:hover 
+  {
+    background-color: #00aeff; 
+    color: white;
+  }
+     
+.adddate,.addcid
+  {
+    margin-left: 5px;
+    font-weight:700;
+    text-transform: uppercase;
+    border:none;
+    padding:5px 15px 5px 15px;
+    cursor: pointer;
+    display:inline-block;
+    text-decoration: none;
+    background:#00aeff;
+    color:#fff;
+    box-shadow:0 5px 0 #047cac;
+  }
+.adddate:hover,.addcid:hover
+  {
+    background:#00aeff;
+    box-shadow:0 5px 0 #047cac;
+  }
+.adddate:active,.addcid:active
+  {
+    position:relative;
+    top:5px;
+    box-shadow:none;
+  }
+#bc_logo
+  {
+    width: 200px;
+    height: auto;
+    margin: 2rem;
+  }
+.fixo
+  {
+    position: relative; 
+    width: 100%;
+    text-align: center;
+  }
+ </style>
+<!--logo-->
+  <div class="fixo">
+    <img id="bc_logo" src = "bc_logo.svg" alt="BônusCred"/>
+      </div>
+<!--main-->    
+  <div class="container">
+    <div class="item">
+<!--Formulario-->
+  <form  class="form" action="MATERIALPARADIVULGACAO.php" method="POST" enctype="multipart/form-data" id="Divulgacao">
+    <div class="titulo" ><h1>Material Para Divulgação</h1></div> 
+<!-- Referente ao Credenciador-->
+  <div class="subtitulo" ><h5>Referente ao Credenciador</h5></div> 
+<!-- nome-->	 
+	<div class="form-group">
+    <label class="form-label" for="nomedivulg">Nome:</label>
+      <input type="text" class="form-control" id="nomedivulg" name="nomedivulgação"  placeholder="Insira seu nome"  required >
+        </div> 
+<!-- email-->
+  <div class="form-group">
+    <label class="form-label" for="emailcred">Email:</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend2">@</span>
+        </div>
+      <input name="credenciadoremail" type="email" class="form-control" id="emailcred" placeholder="Insira seu Email" aria-describedby="inputGroupPrepend2" required>
+    </div>
+  </div> 
+<!-- nome da empresa-->
+  <div class="subtitulo" ><h5>Referente a Empresa</h5></div> 
+    <div class="form-group">
+      <label class="form-label"  for="nomeempresa">Nome da Empresa:</label>
+        <input name="NomedaEmpresa" type="text" class="form-control" id="nomeempresa"  placeholder="Insira o Nome da Empresa" required >
+          </div>
+<!-- codempresa--> 
+	<div class="form-group">
+    <label class="form-label" for="codempresa">Código da Empresa:</label>
+      <input name="CódigodaEmpresa" type="text" class="form-control" id="codempresa" placeholder="Insira o Código da Empresa" required >
+        </div> 
+<!--prazo de pagamaneto-->	  
+	<div class="form-group">
+    <label class="form-label" for="prazodepagamento">Prazo de Pagamento:</label>
+      <input name="PrazodePagamento" type="text" class="form-control" id="prazodepagamento" placeholder="Insira o Prazo de Pagamento" required>
+        </div> 
+          <br>
+<!--radio-->	
+  <div><h6>Possui Private?<font style="color:red;">*</font></h6></div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="PossuiPrivate" id="privateS" value="sim" checked>
+        <label class="form-label" for="privateS">Sim </label>
+          </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="PossuiPrivate" id="privateN" value="não">
+      <label class="form-label" for="privateN">Não </label>
+        </div>
+          <br>
+<!--Bandeira-->
+  <div><h6>Bandeira:<font style="color:red;">*</font></h6></div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="Bandeira" id="idbnc" value="BonusCred" required>
+        <label class="form-label" for="idbnc">BônusCred</label>
+          </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="Bandeira" id="idcpd" value="PreDatado">
+      <label class="form-label" for="idcpd">Pré Datado </label>
+        </div>
+<!--informações para criação-->        		   
+  <div class="subtitulo" ><h4>Informações para Criação:</h4></div>
+  <hr>
+	  <div class="caixa">
+      <div class="smalltext"><small>*Caso não haja sorteio/promoção/data de ínicio ou término, desconsiderar estes campos.*</small>	</div>
+<!--promoção-->  		   
+  <div><h6>Data da Promoção:</h6></div>		   
+    <div>
+      <div class="row">
+        <div class="col-6">
+          <label class="form-label" for="inicio">Data de Início:</label>
+            </div>
+          <div class="col-6">
+        <input name="Datainicio" type="date" class="form-control" id="inicio">
+      </div>
+    </div>
+	</div>
+<!--data da promocao-->					
+	<div >
+    <div class="row">
+      <div class="col-6">
+        <label class="form-label" for="termino">Data de Término:</label>
+          </div>
+          <div class="col-6">
+        <input name="Datatermino" type="date" class="form-control" id="termino" >
+      </div>
+    </div>
+  </div>
+<!--data da sorteio-->				  
+	<div>
+    <div class="row">
+      <div class="col-6">
+        <label class="form-label" for="sorteio">Data do Sorteio:</label>
+          <br> <small style="color:blue">Adicione até 5 campos</small>	
+            </div>
+              <div class="col-6">
+		            <div class="input-group">
+                  <input name="datasorteio" type="date" class="form-control" id="sorteio" > 
+<!--botam mais -->                
+	<div class="input-group-prepend">
+		<button type="button" class="adddate" id="adddate" >+</button>
+      </div> 
+		    </div>
+      </div>
+    </div>
+	</div>
+<!--data sorteio extra-->				  		  
+  <div >
+    <div class="row box">
+      <div class="col-6">
+        </div>
+          <div class="col-6">
+			      <div class="input-group d-block">
+          <div id="boxdate" class="boxdate" > </div>
+        </div>
+		  </div>
+    </div>
+  </div>	
+<!--cidades sorteadas -->		   
+  <div><h6>Cidades Sorteadas:</h6></div>	
+    <div>
+      <div class="row">
+  <div class="col-6">
+    <label class="form-label" for="cidsorteadas">Cidade(s) Sorteada(s):</label>
+      <br>
+        <small style="color:blue">Adicione até 5 campos</small>
+          </div>
+  <div class="col-6">
+    <div class="input-group">
+      <input name="cidsorteadas" type="text" class="col-6 form-control" id="cidsorteadas">
+  <div class="input-group-prepend">
+    <button type="button" class="addcid" id="addcid" >+</button>
+      </div> 
+          </div> 
+      </div>
+    </div>
+	</div>
+<!--cidade sorteio extra-->	      
+	<div>
+    <div class="row box">
+      <div class="col-6"></div>
+		<div class="col-6">
+		  <div class="input-group d-block">
+        <div id="boxcidades" class="boxcidades" style="margin-bottom: 1rem" > </div>
+      </div>
+		</div>
+      </div>
+    </div>	
+	</div>
+  <hr>
+<!--materiais convencionais-->	   
+  <div class="subtitulo" ><h4>Materiais a serem feitos:</h4></div>
+    <div><h6>Materiais Convencionais:</h6></div>
+<!--checklist convencionais --> 
+	<div class="form-check form-check-inline">
+    <input name="MateriaisConven[]" class="form-check-input" type="checkbox" id="carnedivulg" value="Carnê">
+      <label class="form-label" for="carnedivulg">Carnê</label>
+        </div>
+<!--checklist --> 
+	<div class="form-check form-check-inline">
+    <input name="MateriaisConven[]" class="form-check-input" type="checkbox" id="flyerdivulg" value="Flyer">
+      <label class="form-label" for="flyerdivulg">Flyer</label>
+        </div>
+ <!--checklist --> 			
+	<div  class="form-check form-check-inline">
+    <input name="MateriaisConven[]" class="form-check-input" type="checkbox" id="bannerdivulg" value="Banner">
+      <label class="form-label" for="bannerdivulg">Banner</label>
+        </div>	
+ <!--checklist --> 			
+	<div  class="form-check form-check-inline">
+    <input name="MateriaisConven[]" class="form-check-input" type="checkbox" id="outdoordivulg" value="Outdoor">
+      <label class="form-label" for="outdoordivulg">Outdoor</label>
+        </div>
+ <!--checklist --> 			
+	<div class="form-check form-check-inline">
+    <input name="MateriaisConven[]" class="form-check-input" type="checkbox" id="placasdivulg" value="Placas">
+      <label class="form-label" for="placasdivulg">Placas</label>
+        </div>
+ <!--checklist --> 			
+	<div class="form-check form-check-inline">
+    <input name="MateriaisConven[]" class="form-check-input" type="checkbox" id="adesivosdivulg" value="Adesivos">
+      <label class="form-label" for="adesivosdivulg">Adesivos</label>
+        </div>
+ <!--checklist --> 			
+	<div  class="form-check form-check-inline">
+    <input name="MateriaisConven[]" class="form-check-input" type="checkbox" id="outrosdivulg" value="Outros">
+      <label class="form-label" for="outrosdivulg">Outros</label>
+        </div>
+ <!--especificções--> 			
+	<div  class="mb-3">
+    <label  class="form-label" for="especif">Especificações:</label>
+      <textarea name="esp1" class="form-control" id="especif" rows="2"  required placeholder="quantidade, medidas, ...."></textarea><br>
+        </div>
+<!--checklist digitais --> 	
+  <div class="form-label" ><h6>Materiais Digitais:</h6></div>
+		<div class="form-check form-check-inline">
+       <input  name="MateriaisDigitais[]" class="form-check-input" type="checkbox" value="Whatsapp" id="Whatsappdivulg">
+          <label class="form-label" for="Whatsappdivulg">Whatsapp</label>
+            </div>
+ <!--checklist --> 			
+	<div class="form-check form-check-inline">
+    <input  name="MateriaisDigitais[]" class="form-check-input" type="checkbox" value="Publicação" id="Publicaçãodivulg">
+      <label class="form-label" for="Publicaçãodivulg">Publicação</label>
+        </div>
+ <!--checklist --> 			
+  <div class="form-check form-check-inline">
+    <input  name="MateriaisDigitais[]" class="form-check-input" type="checkbox" value="Storys" id="storysdivulg">
+      <label class="form-label" for="storysdivulg">Storys</label>
+        </div>
+ <!--checklist --> 			
+	<div class="form-check form-check-inline">
+    <input  name="MateriaisDigitais[]" class="form-check-input" type="checkbox" id="outrosdivulgdigital" value="Outros" >
+      <label class="form-label" for="outrosdivulgdigital">Outros</label>
+        </div>
+<!--especificações--> 			
+	<div  class="mb-3">
+    <label class="form-label" for="digitaisespecif" >Especificações:</label>
+      <textarea name="esp2" class="form-control" id="digitaisespecif" rows="2" placeholder="Descrição de como os materiais deverão ser produzidos." required ></textarea>
+        </div><br>	
+<!--considerações--> 			   
+	<div  class="mb-3">
+    <label class="form-label" for="consideraçõesdofornecedordivulg">Considerações do Fornecedor:</label>
+      <textarea name="consideracoesdofornecedorparadivulgação" class="form-control" id="consideraçõesdofornecedordivulg" rows="4" placeholder="Descrição de como os materiais deverão ser produzidos." ></textarea>
+        </div>
+<!--anexos--> 			   
+  <div class="mb-3">
+    <label class="form-label" for="anexosdivulg" >Anexos</label>   <small style="color:blue">**Selecione apenas um arquivo em cada campo**</small>
+      <input  name="arquivo" class="form-control" type="file" id="anexosdivulg" >
+        </div>
+  <div class="mb-3">
+    <input  name="arquivo2" class="form-control" type="file" id="arquivo"  >
+      </div>	
+ <div class="mb-3">
+    <input  name="arquivo3" class="form-control" type="file" id="arquivo"  >
+      </div>
+  <div class="mb-3">
+    <input  name="arquivo4" class="form-control" type="file" id="arquivo"  >
+      </div>
+  <div class="mb-3">
+    <input  name="arquivo5" class="form-control" type="file" id="arquivo"  >
+      </div>
+<!--botão-->
+  <div class="row">
+    <div class="col">
+		  <button class="button" type="submit" name="enviar ">Enviar</button>
+			  </div>
+  <div  class="col d-flex justify-content-center">
+		<button class="button" onclick="window.location.href = 'index.html'">Voltar</button>
+		  </div>
+				</div>
+  </form>	
+  </div>
+</div>
+
+
+<script >
+var btn_adddate= document.getElementById('adddate');
+var form2 = document.getElementById('Divulgacao');
+var boxdate = document.getElementById('boxdate');
+var contador3 = 1;
+btn_adddate.addEventListener('click', function(){
+    contador3++;
+    createInput3();
+});
+function createInput3()
+{
+	var elemento = document.createElement('input');
+	elemento.setAttribute('type','date');  
+    elemento.setAttribute('style','margin-bottom: 0.5rem');  
+	elemento.setAttribute('class','col-6 form-control'); 	
+	elemento.setAttribute('name','datasorteio_'+ contador3);
+	elemento.setAttribute('id','sorteio_'+ contador3);
+
+	boxdate.appendChild(elemento);
+}
+//---------------------------------------------------------------------------------=//
+var btn_addcid= document.getElementById('addcid');
+var form2 = document.getElementById('Divulgacao');
+var boxcidades = document.getElementById('boxcidades');
+var contador4 = 1;
+btn_addcid.addEventListener('click', function(){
+    contador4++;
+    createInput4();
+});
+function createInput4()
+{
+	var elemento = document.createElement('input');
+	elemento.setAttribute('type','text');  
+    elemento.setAttribute('style','margin-bottom: 0.5rem');  
+	elemento.setAttribute('class','col-6 form-control'); 	
+	elemento.setAttribute('name','cidsorteadas_'+ contador4);
+	elemento.setAttribute('id','cidsorteadas_'+ contador4);
+	boxcidades.appendChild(elemento);
+}
+
+</script>
+</body>
+</html>				

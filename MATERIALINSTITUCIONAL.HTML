@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Institucional</title>
+    <link rel="shortcut icon" href="icon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  </head>
+<body>
+<style>
+@media (max-width: 786px)
+  {
+    body, html 
+      {
+        overflow-x: hidden!important;
+      }
+  }
+.container 
+  {
+    display: flex;
+    justify-content: center;
+  }
+.item
+  {
+    width: 700px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+.form
+  {
+    margin: 1rem;
+  }
+.titulo 
+  {
+    margin: 2rem;
+    justify-content: center;
+    text-align: center;
+  }
+.subtitulo , h5
+  {
+    margin: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+.mb-3, .form-control
+  {
+    margin-bottom: 0.5rem;
+  }
+
+.row, col
+  {
+    text-align: center;
+    margin-top: 2rem;
+    justify-content:center;
+  }
+
+.button 
+  {
+    background-color: white;
+    color: #00aeff;
+    border: 2px solid #00aeff; 
+    border-radius: 8px;
+    font-size: 25px;
+  }
+  
+.button:hover 
+  {
+    background-color: #00aeff; 
+    color: white;
+  }
+#bc_logo
+  {
+    width: 200px;
+    height: auto;
+    margin: 2rem;
+  }
+.fixo
+  {
+    position: relative; 
+    width: 100%;
+    text-align: center;
+  }
+</style>
+
+<!--logo-->
+<div class="fixo">
+  <img id="bc_logo" src = "bc_logo.svg" alt="BônusCred"/>
+    </div>
+<!--main-->
+ <div class="container">
+   <div class="item">
+<!--Formulario-->
+    <form class="form" action="MATERIALINSTITUCIONAL.php" enctype="multipart/form-data" method="POST" id="Institucional">	
+      <div class="titulo"><h1>Pedido de Material Institucional</h1></div>    	
+<!-- Referente ao Credenciador-->
+  <div class="subtitulo" ><h5>Referente ao Solicitante</h5></div> 	 
+<!-- nome-->	 
+	<div class="form-group">
+    <label class="form-label" for="nomesolicitante">Nome:</label>
+      <input class="form-control" name="nomedoolicitante" type="text"  id="nomesolicitante"  placeholder="Insira seu nome"  required >
+        </div> 
+<!--email-->	
+  <div class="form-group">
+    <label class="form-label" for="emailsolicit">Email:</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend2">@</span>
+        </div>
+      <input name="emailsolitante" type="email" class="form-control" id="emailsolicit" placeholder="Insira seu Email" aria-describedby="inputGroupPrepend2" required>
+    </div>
+  </div>
+<!--descrições-->   
+  <div class="subtitulo" ><h5>Referente ao Material:</h5></div>	   
+<!--descrições-->	  
+	<div  class="mb-3">
+    <label class="form-label" for="descricaoinstit">Descrições:</label>
+      <textarea name="descriçõesInstitucional" class="form-control" id="descricaoinstit" placeholder="Tipo de material a ser feito, medidas e quantidade." rows="4"  ></textarea>
+        </div>	
+<!--descrições-->	  
+	<div class="mb-3">
+    <label class="form-label" for="consideracaoinstit" >Considerações Finais:</label>
+      <textarea name="consideraçõesInstitucional" class="form-control" id="consideracaoinstit" placeholder="Descrição de como os materiais deverão ser produzidos" rows="4" ></textarea>
+        </div>
+<!--anexos--> 			   
+  <div class="mb-3">
+    <label class="form-label" for="arquivo" >Anexos</label>     <small style="color:blue">**Selecione apenas um arquivo em cada campo**</small>
+      <input  name="arquivo" class="form-control" type="file" id="arquivo"  >
+        </div>	            
+  <div class="mb-3">
+    <input  name="arquivo2" class="form-control" type="file" id="arquivo"  >
+      </div>				   
+  <div class="mb-3">
+    <input  name="arquivo3" class="form-control" type="file" id="arquivo"  >
+      </div>                      		   
+  <div class="mb-3">
+    <input  name="arquivo4" class="form-control" type="file" id="arquivo"  >
+      </div>                     			   
+  <div class="mb-3">
+    <input  name="arquivo5" class="form-control" type="file" id="arquivo"  >
+      </div>            
+<!--botoes-->		
+  <div class="row">
+    <div  class="col">
+		  <button class="button" type="submit" >Enviar</button>
+			  </div>
+  <div class="col">
+		<button  class="button" onclick="window.location.href = 'index.html'">Voltar</button>
+		  </div>
+	</div>						   		   
+    </form>
+    </div>
+  </div>
+
+</body>
+</html>

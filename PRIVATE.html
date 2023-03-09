@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Private</title>
+    <link rel="shortcut icon" href="icon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  </head>
+<body>
+    <style>
+@media (max-width: 786px)
+  {
+    body, html 
+      {
+        overflow-x: hidden!important;
+      }
+  }
+.container 
+  {
+    display: flex;
+    justify-content: center;
+   
+  } 
+.item
+  {
+    width: 700px;
+    justify-content: center;
+    margin: 0 auto;
+  } 
+.form
+  {
+    margin: 1rem;
+  }
+.titulo 
+  {
+    margin: 2rem;
+    justify-content: center;
+    text-align: center;
+  } 
+.subtitulo , h5 , h4
+  {
+    margin: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    text-align: center;
+  } 
+.mb-3,  .form-control
+  {
+    margin-bottom: 0.5rem;
+  }
+.row, col
+  {
+    text-align: center;
+    margin-top: 2rem;
+    justify-content:center;
+  }
+.button 
+  {
+    background-color: white;
+    color: #00aeff;
+    border: 2px solid #00aeff; 
+    border-radius: 8px;
+    font-size: 25px;
+  } 
+.button:hover 
+  {
+    background-color: #00aeff; 
+    color: white;
+  }  
+.add,.add2
+  {
+    margin-left: 5px;
+    font-weight:700;
+    text-transform: uppercase;
+    border:none;
+    padding:5px 15px 5px 15px;
+    cursor: pointer;
+    display:inline-block;
+    text-decoration: none;
+    background:#00aeff;
+    color:#fff;
+    box-shadow:0 5px 0 #047cac;
+  }
+.add:hover,.add2:hover
+  {
+    background:#00aeff;
+    box-shadow:0 5px 0 #047cac;
+  }
+.add:active,.add2:active
+  {
+    position:relative;
+    top:5px;
+    box-shadow:none;
+  }  
+#bc_logo
+  {
+    width: 200px;
+    height: auto;
+    margin: 2rem;
+  }
+.fixo
+  {
+    position: relative; 
+    width: 100%;
+    text-align: center;
+  }
+   </style>
+
+<!--logo-->
+  <div class="fixo">
+    <img id="bc_logo" src = "bc_logo.svg" alt="BônusCred"/>
+      </div>
+<!--main-->    
+  <div class="container">
+    <div class="item">
+<!--Formulario--> 
+  <form class="form" action="PRIVATE.php" method="POST" enctype="multipart/form-data"  id="Private">
+<!-- Referente ao Credenciador-->
+  <div class="titulo" ><h1>Pedido de Private</h1></div>
+  <div class="subtitulo" ><h5>Referente ao Credenciador</h5></div> 
+<!-- nome-->	 
+	<div class="form-group">
+    <label class="form-label" for="nomecredenciadorprivate">Nome:</label>
+      <input name="nomedocredenciador"  type="text" class="form-control" id="nomecredenciadorprivate"  placeholder="Insira seu nome"  required >
+        </div>   
+<!-- email-->
+  <div class="form-group">
+    <label class="form-label" for="email">Email:</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend2">@</span>
+        </div>
+      <input name="emailcredenciador" type="email" class="form-control" id="email" placeholder="Insira seu Email" aria-describedby="inputGroupPrepend2" required !important>
+    </div>
+  </div>
+<!-- nome da empresa-->
+  <div class="subtitulo" ><h5>Referente a Empresa</h5></div> 
+    <div class="form-group">
+      <label class="form-label" for="nomeempresa">Nome da Empresa:</label>
+        <input name="NomedaEmpresa" type="text" class="form-control" id="nomeempresa" aria-describedby="nomeempresaHelp" placeholder="Insira o Nome da Empresa"  required >
+          </div>
+<!-- codempresa--> 
+	<div class="form-group">
+    <label class="form-label"  for="codempresa">Código da Empresa:</label>
+      <input name="CódigodaEmpresa" type="text" class="form-control" id="codempresa" placeholder="Insira o Código da Empresa"  required>
+        </div> 
+<!--prazo de pagamaneto-->	  
+	<div class="form-group">
+    <label class="form-label"  for="prazodepagamento">Prazo de Pagamento:</label>
+      <input name="PrazodePagamento" type="text" class="form-control" id="prazodepagamento" placeholder="Insira o Prazo de Pagamento"  required>
+        </div> 
+        <br>
+        <!--Bandeira-->
+  <div><h6>Bandeira:<font style="color:red;">*</font></h6></div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="Bandeira" id="idbnc" value="BonusCred" required>
+        <label class="form-label" for="idbnc">BônusCred</label>
+          </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="Bandeira" id="idcpd" value="PreDatado">
+      <label class="form-label"  for="idcpd">Pré Datado </label>
+        </div>
+        <br>
+<!--phone-->	  
+	<div class="form-group" >
+    <label class="form-label" for="phone">Telefone da Empresa:</label> <small style="color:blue">Adicione até 6 campos</small>	
+      <input type="tel" class="form-control" id="phone" name="phone"  placeholder="(__)____-____"  required>
+        </div>     
+<!--mais mais -->	
+	<div id="box" class="box" style="margin-bottom: 1rem" ></div>
+    <div class="d-flex justify-content-center">
+	    <button type="button" class="add" id="add" >+</button>	   
+	      </div>
+<!-- Endereço da empresa-->
+  <div class="form-group" >
+    <label  class="form-label" for="enderecoempresa">Endereço da Empresa:</label> <small style="color:blue">Adicione até 6 campos</small>	
+        <input type="text" class="form-control" name="EnderecodaEmpresa" id="enderecoempresa" aria-describedby="enderecoempresaHelp" placeholder="Rua, Número, Bairro, Cidade - UF"  required>
+          </div>    	
+<!--mais mais -->	
+	   <div id="box2" class="box2" style="margin-bottom: 1rem" ></div>
+       <div class="d-flex justify-content-center">
+	   <button style="margin-bottom: 2rem" type="button" class="add2" id="add2" >+</button>	   
+	   </div>
+<!--nomeresponsavel--> 
+  <div class="subtitulo"><h5>Referente ao Responsavel pela Empresa</h5></div>  
+    <div class="form-group">
+      <label class="form-label" for="Responsavel">Responsavel:</label>
+        <input name="Responsavel" type="text" class="form-control" id="Responsavel" placeholder="Insira o Nome do Responsavel pela Empresa" required>
+          </div>	  
+<!--contatoresponsavel--> 
+  <div class="form-group">
+    <label class="form-label"  for="ContatoResponsavel" >Contato do Responsavel:</label>
+      <input name="ContatoResponsavel" type="tel" class="form-control" id="ContatoResponsavel" aria-describedby="ContatoResponsavelempresaHelp" placeholder="Insira o contato do Responsavel pela Empresa"   required>
+        </div>		 
+<!--emailresponsavel--> 
+  <div class="form-group">
+    <label class="form-label" for="EmailResponsavel"  >Email do Responsavel:</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend2">@</span>
+            </div>
+          <input  name="EmailResponsavel"type="email" class="form-control" id="EmailResponsavel" aria-describedby="EmailResponsavelempresaHelp" placeholder="Insira o Email do Responsavel pela Empresa"  required>
+        </div>
+      </div>	
+<!--enviar--> 	 
+  <div class="subtitulo" ><h4>Informações para Criação.</h4></div>
+    <div ><h5>Materiais Adicionais:</h5></div>
+      <div style="margin-bottom: 2rem" ><h6>Materiais Convencionais:</h6></div>
+<!--checklist convencionais --> 
+	<div class=" form-check form-check-inline">
+    <input name="MateriaisConven[]" class="form-check-input" type="checkbox" id="carne" value="Carnê">
+      <label class="form-label" for="carne">Carnê</label>
+        </div>
+	<div class="form-check form-check-inline">
+    <input name="MateriaisConven[]" class="form-check-input" type="checkbox" id="flyer" value="Flyer">
+      <label class="form-label" for="flyer">Flyer</label>
+        </div>
+	<div  class="form-check form-check-inline">
+    <input name="MateriaisConven[]" class="form-check-input" type="checkbox" id="banner" value="banner">
+      <label class="form-label" for="banner">Banner</label>
+        </div>
+	<div  class="mb-3">
+    <label class="form-label" name="especif" for="convencionaisobs">Especificações:</label>
+      <textarea name="especif" class="form-control" id="convencionaisobs" rows="2" placeholder="Quantidade, medidas e descrição de como os materiais deverão ser produzidos." required ></textarea>
+        </div>
+<!--checklist digitais--> 
+  <div style="margin-top: 2rem" ><h6>Materiais Digitais:</h6></div>
+		<div  style="margin-top: 1rem" class="form-check form-check-inline">
+      <input  name="MateriaisDigitais[]" class="form-check-input" type="checkbox" value="Capa_Facebook" id="capaparafacebook" checked>
+        <label class="form-label" for="capaparafacebook">Capa Para Facebook</label>
+          </div>
+	<div class="form-check form-check-inline">
+    <input  name="MateriaisDigitais[]"class="form-check-input" type="checkbox" id="Publicação" value="Publicação" checked>
+      <label class="form-label" for="Publicação">Publicação</label>
+        </div>
+  <div class="form-check form-check-inline">
+    <input  name="MateriaisDigitais[]"class="form-check-input" type="checkbox" value="Storys" id="storys" checked>
+      <label class="form-label"  for="storys">Storys</label>
+        </div>
+<!--especificações--> 			
+	<div class="mb-3">
+    <label class="form-label" for="digitaisobs" >Especificações:</label>
+      <textarea name="digitaisobs" class="form-control" id="digitaisobs" rows="2" placeholder="Descrição de como os materiais deverão ser produzidos." required ></textarea>
+        </div>
+<!--considerações--> 			   
+	<div  class="mb-3">
+    <label class="form-label" for="consideraçõesdofornecedor" ">Considerações do Fornecedor:</label>
+      <textarea name="consideraçõesdofornecedor" class="form-control" id="consideraçõesdofornecedor"  placeholder="Descrição de como os materiais deverão ser produzidos." rows="4" required ></textarea>
+        </div>
+<!--anexos--> 			   
+  <div class="mb-3">
+    <label  class="form-label" for="anexosdivulg" >Anexos</label>  <small style="color:blue">**Selecione apenas um arquivo em cada campo**</small>	
+      <input  name="arquivo" class="form-control" type="file" id="anexosdivulg" >
+        </div>
+  <div class="mb-3">
+    <input  name="arquivo2" class="form-control" type="file" id="arquivo"  >
+      </div>	               
+  <div class="mb-3">
+    <input  name="arquivo3" class="form-control" type="file" id="arquivo"  >
+      </div>                                  
+  <div class="mb-3">
+    <input  name="arquivo4" class="form-control" type="file" id="arquivo"  >
+      </div>                               
+  <div class="mb-3">
+    <input  name="arquivo5" class="form-control" type="file" id="arquivo"  >
+      </div>
+        <small style="color:red">*A logo da empresa deve ser enviada nos formatos .PDF e/ou .AI e/ou .CDR</small>
+<!--enviar--> 
+  <div class="row">
+    <div   class="col">
+		  <button class="button" type="submit" form="Private" >Enviar</button>
+			  </div>
+<!--voltar--> 
+  <div  class="col">
+		<button class="button" onclick="window.location.href = 'index.html'">Voltar</button>
+			</div>	
+        </div>				
+  </form>
+    </div>
+  </div>
+
+<script>
+/*telefone*/
+  var btn_add = document.getElementById('add');
+   var form1 = document.getElementById('Private');
+    var box = document.getElementById('box');
+     var contador = 1;
+      btn_add.addEventListener('click', function(){
+     contador++;
+    createInput();
+   });
+  function createInput()
+   {
+	  var elemento = document.createElement('input');
+	   elemento.setAttribute('type','tel');  
+	    elemento.setAttribute('pattern','[0-9]{2}[0-9]{5}[0-9]{4}');
+	     elemento.setAttribute('class','form-control'); 
+	      elemento.setAttribute('style','margin-bottom: 0.5rem');
+	     elemento.setAttribute('placeholder','(__)____-____');
+	    elemento.setAttribute('name','phone_'+ contador);
+	   elemento.setAttribute('id','phone_'+ contador);
+	  box.appendChild(elemento);
+   }
+
+/*endereço*/
+  var btn_add2 = document.getElementById('add2');
+   var form1 = document.getElementById('Private');
+    var box2 = document.getElementById('box2');
+     var contador2 = 1;
+      btn_add2.addEventListener('click', function(){
+     contador2++;
+    createInput2();
+   });
+  function createInput2()
+   {
+	  var elemento = document.createElement('input');
+	   elemento.setAttribute('type','text');  
+	    elemento.setAttribute('class','form-control'); 
+	     elemento.setAttribute('style','margin-bottom: 0.5rem');
+	      elemento.setAttribute('placeholder','Rua, Número, Bairro, Cidade - UF');
+	     elemento.setAttribute('aria-describedby','enderecoempresaHelp');	
+	    elemento.setAttribute('name','enderecoempresa_'+ contador2);
+	   elemento.setAttribute('id','enderecoempresa_'+ contador2);
+	  box2.appendChild(elemento);
+   }
+</script>
+</body>
+</html>
